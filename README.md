@@ -1,11 +1,14 @@
-ROS2 Foxy Docker Setup
+# *ROS2 Foxy Docker Setup*
 
-Build the Docker Image
+## *Build the Docker Image*
 
+```sh
 docker build -t ros-foxy .
+```
 
-Run the Docker Container
+## Run the Docker Container
 
+```sh
 docker run -it \
     --net=host \
     --privileged \
@@ -18,32 +21,47 @@ docker run -it \
     -v /dev:/dev \
     --name test \
     osrf/ros:foxy-desktop
+```
 
-Allow GUI Access
+## Allow GUI Access
 
+```sh
 xhost +
+```
 
-Access the Running Container
+## Access the Running Container
 
+```sh
 docker exec -it ros-foxy bash
+```
 
-List All Containers
+## List All Containers
 
+```sh
 docker ps -a
+```
 
-Restart a Stopped Container
+## Restart a Stopped Container
 
+```sh
 docker restart <container_ID>
+```
 
-Restart a Running Container
+## Restart a Running Container
 
+```sh
 docker restart <container_ID>
+```
 
-Remove a Container
+## Remove a Container
 
+```sh
 docker rm <container_ID>
+```
 
-Exit the Container
+## Exit the Container
 
+```sh
 exit
+```
 
