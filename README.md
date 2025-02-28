@@ -65,3 +65,17 @@ docker rm <container_ID>
 exit
 ```
 
+## in docker install & source
+
+```sh
+sudo apt-get update
+sudo apt-get install ros-foxy-ament-cmake
+
+source /opt/ros/foxy/setup.bash
+
+```
+
+
+
+
+
